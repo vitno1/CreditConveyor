@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 /*
-* элемент графика платежей*/
+ * элемент графика платежей*/
 public class PaymentScheduleElement {
 
     private Integer number;

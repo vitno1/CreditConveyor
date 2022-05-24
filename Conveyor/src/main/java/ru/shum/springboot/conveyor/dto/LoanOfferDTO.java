@@ -3,7 +3,7 @@ package ru.shum.springboot.conveyor.dto;
 import java.math.BigDecimal;
 
 /*
-* предложение кредита*/
+ * предложение кредита*/
 public class LoanOfferDTO {
 
     private Long applicationId; //id кредита
@@ -14,6 +14,9 @@ public class LoanOfferDTO {
     private BigDecimal rate; //ставка
     private Boolean isInsuranceEnabled; //включена ли страховка
     private Boolean isSalaryClient; //зп клиента норм?
+
+    public LoanOfferDTO() {
+    }
 
     public Long getApplicationId() {
         return applicationId;

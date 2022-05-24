@@ -3,7 +3,7 @@ package ru.shum.springboot.conveyor.dto;
 import java.math.BigDecimal;
 
 /*
-* employment - трудоустройство ,работа,использование,применение,занятие,наем,служба */
+ * employment - трудоустройство ,работа,использование,применение,занятие,наем,служба */
 public class EmploymentDTO {
 
     private Enum employmentStatus;
@@ -12,7 +12,6 @@ public class EmploymentDTO {
     private Enum position;
     private Integer workExperienceTotal;
     private Integer workExperienceCurrent;
-
 
 
 }

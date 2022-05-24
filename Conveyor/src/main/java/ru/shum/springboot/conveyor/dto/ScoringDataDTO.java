@@ -3,7 +3,7 @@ package ru.shum.springboot.conveyor.dto;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 /*
-* данные о подсчете*/
+ * данные о подсчете*/
 
 public class ScoringDataDTO {
 

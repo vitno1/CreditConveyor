@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service
 public class OfferService {
-    private LoanApplicationRequestDTO loanApplicationRequestDTO;
+//    private LoanApplicationRequestDTO loanApplicationRequestDTO;
 
     private static long id = 1;
 //    private Long applicationId; //id кредита
@@ -24,34 +24,34 @@ public class OfferService {
 //    private Boolean isSalaryClient; //зп клиента норм?
 
 
-    @Autowired
-    public void setLoanApplicationRequestDTO(LoanApplicationRequestDTO loanApplicationRequestDTO) {
-        this.loanApplicationRequestDTO = loanApplicationRequestDTO;
-    }
-
-    public List<LoanOfferDTO> getOffers() {
-        List<LoanOfferDTO> result = new ArrayList<>(4);
-        LoanOfferDTO loanOfferDTO = getLoanOfferDTOWithIdAndRequestAmount();
-
-
-        return null;
-    }
-
-    private LoanOfferDTO getLoanOfferDTOWithIdAndRequestAmount() {
-        LoanOfferDTO loanOfferDTO = new LoanOfferDTO();
-        loanOfferDTO.setApplicationId(id++);
-        loanOfferDTO.setRequestedAmount(loanApplicationRequestDTO.getAmount());
-        loanOfferDTO.setInsuranceEnabled(true);
-        loanOfferDTO.setSalaryClient(true);
-
-
-        return loanOfferDTO;
-    }
-
-    private void changeTotalAmount() {
-        BigDecimal totalAmount;
-        BigDecimal amount = loanApplicationRequestDTO.getAmount();
-        BigDecimal percent = new BigDecimal("1.1");
-        totalAmount = amount.multiply(percent);
-    }
+//    @Autowired
+//    public void setLoanApplicationRequestDTO(LoanApplicationRequestDTO loanApplicationRequestDTO) {
+//        this.loanApplicationRequestDTO = loanApplicationRequestDTO;
+//    }
+//
+//    public List<LoanOfferDTO> getOffers() {
+//        List<LoanOfferDTO> result = new ArrayList<>(4);
+//        LoanOfferDTO loanOfferDTO = getLoanOfferDTOWithIdAndRequestAmount();
+//
+//
+//        return null;
+//    }
+//
+//    private LoanOfferDTO getLoanOfferDTOWithIdAndRequestAmount() {
+//        LoanOfferDTO loanOfferDTO = new LoanOfferDTO();
+//        loanOfferDTO.setApplicationId(id++);
+//        loanOfferDTO.setRequestedAmount(loanApplicationRequestDTO.getAmount());
+//        loanOfferDTO.setInsuranceEnabled(true);
+//        loanOfferDTO.setSalaryClient(true);
+//
+//
+//        return loanOfferDTO;
+//    }
+//
+//    private void changeTotalAmount() {
+//        BigDecimal totalAmount;
+//        BigDecimal amount = loanApplicationRequestDTO.getAmount();
+//        BigDecimal percent = new BigDecimal("1.1");
+//        totalAmount = amount.multiply(percent);
+//    }
 }

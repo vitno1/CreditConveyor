@@ -3,6 +3,7 @@ package ru.shum.springboot.conveyor.dto;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.*;
@@ -12,7 +13,7 @@ import java.time.LocalDate;
 /*
  * заявка на получение кредита*/
 
-@Component
+
 public class LoanApplicationRequestDTO {
 
 
@@ -37,6 +38,7 @@ public class LoanApplicationRequestDTO {
     private String email;
 
     @Pattern(regexp = "\\d{4}.\\d{2}.\\d{2}", message = "please use pattern XXXX.XX.XX")
+    @DateTimeFormat(pattern = "yyyy.MM.dd")
     private LocalDate birthdate;
 
 
@@ -46,15 +48,18 @@ public class LoanApplicationRequestDTO {
     @Pattern(regexp = "\\d{6}", message = "please use pattern XXXXXX")
     private String passportNumber;
 
-    public LoanApplicationRequestDTO(@Value("${amount}") BigDecimal amount,
-                                     @Value("${term}")Integer term,
-                                     @Value("${firstName}")String firstName,
-                                     @Value("${lastName}") String lastName,
-                                     @Value("${middleName}")String middleName,
-                                     @Value("${email}")String email,
-                                     @Value("${birthdate}")LocalDate birthdate,
-                                     @Value("${passportSeries}")String passportSeries,
-                                     @Value("${passportNumber}")String passportNumber) {
+    public LoanApplicationRequestDTO() {
+    }
+
+    public LoanApplicationRequestDTO(BigDecimal amount,
+                                     Integer term,
+                                     String firstName,
+                                     String lastName,
+                                     String middleName,
+                                     String email,
+                                     LocalDate birthdate,
+                                     String passportSeries,
+                                     String passportNumber) {
         this.amount = amount;
         this.term = term;
         this.firstName = firstName;
